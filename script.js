@@ -81,35 +81,6 @@ allergyRadios.forEach(radio => {
   });
 });
 
-const form = document.getElementById("block6Form");
-
-form.addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  const response = await fetch(
-    "https://api.web3forms.com/submit",
-    {
-      method: "POST",
-      body: formData
-    }
-  );
-
-  const result = await response.json();
-
-  if (result.success) {
-    alert("Спасибо! Анкета успешно отправлена.");
-    form.reset();
-
-    document
-      .querySelectorAll(".block6-extra-field")
-      .forEach(el => el.classList.remove("show"));
-  } else {
-    alert("Ошибка отправки. Попробуйте еще раз.");
-  }
-});
-
 /* плавное появление блоков */
 if (revealItems.length) {
   const observer = new IntersectionObserver(
