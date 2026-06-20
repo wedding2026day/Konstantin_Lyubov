@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title data-i18n="page_title">Приглашение</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- СТАРТОВЫЙ ЭКРАН -->
+
+<section class="start-screen" id="startScreen">
+
+  <img class="start-img" src="img/16.png" alt="">
+
+  <button class="start-btn" id="startBtn" type="button">
+    <img src="img/17.png" alt="">
+  </button>
+
+</section>
+
+<audio id="bgMusic" loop>
+  <source src="85d3aa42549fd2c.mp3" type="audio/mpeg">
+</audio>
+
+<div class="site-content" id="siteContent">
+
+    <!-- музыка -->
+<!-- <audio id="bgMusic" loop>
+  <source src="30-christina-perri-a-thousand-years_l6SIkvzn.mp3" type="audio/mpeg">
+</audio> -->
+
+<!-- кнопка управления -->
+<button id="musicBtn" class="music-btn"></button>
+    <!-- БЛОК 1 -->
+
+<section class="block1 reveal">
+  <img class="block1-img" src="img/1.png" alt="">
+</section>
+
+    <!-- БЛОК 2 -->
+
+<section class="block2">
+  <img class="block2-img reveal" src="img/2.png" alt="">
+</section>
+
+<!-- БЛОК 3 -->
+
+<section class="block3 reveal">
+
+  <div class="block3-wrap">
+    <img class="block3-img" src="img/3.png" alt="">
+
+    <a class="block3-btn" href="https://yandex.ru/maps/-/CTA3jSpA" target="_blank">
+  <img src="img/4.png" alt="">
+</a>
+  </div>
+
+</section>
+
+    <!-- БЛОК 4 -->
+
+<section class="block4">
+  <img class="block4-img reveal" src="img/5.png" alt="">
+  <img class="block4-img reveal" src="img/6.png" alt="">
+  <img class="block4-img reveal" src="img/7.png" alt="">
+  <img class="block4-img reveal" src="img/8.png" alt="">
+  <img class="block4-img reveal" src="img/9.png" alt="">
+  <img class="block4-img reveal" src="img/10.png" alt="">
+</section>
+
+   <!-- БЛОК 5 -->
+
+<section class="block5 reveal">
+  <img class="block5-img" src="img/11.png" alt="">
+</section>
+
+<!-- БЛОК 6 -->
+
+<section class="block6 reveal">
+
+  <div class="block6-top">
+    <img class="block6-img" src="img/12.png" alt="">
+
+    <button class="block6-open-btn" id="openFormBtn" type="button">
+      <img src="img/13.png" alt="">
+    </button>
+  </div>
+
+  <div class="block6-form-wrap" id="block6FormWrap">
+    <form class="block6-form" id="block6Form" action="https://api.web3forms.com/submit" method="POST">
+
+  <!-- сюда вставь свой ключ Web3Forms -->
+  <input type="hidden" name="access_key" value="765529b4-2dd1-4210-a479-865e64bb3c55">
+
+  <input type="hidden" name="subject" value="Новая анкета с приглашения">
+  <input type="hidden" name="from_name" value="Свадебное приглашение">
+
+  <input
+    class="block6-input"
+    type="text"
+    name="ФИО"
+    placeholder="Введите ваше ФИО"
+    required
+  >
+
+  <div class="block6-group">
+    <p class="block6-group-title">Подтвердите присутствие</p>
+
+    <label class="block6-option">
+      <input type="radio" name="Присутствие" value="Да, я с удовольствием приду" required>
+      <span>Да, я с удовольствием приду</span>
+    </label>
+
+    <label class="block6-option">
+      <input type="radio" name="Присутствие" value="К сожалению, не смогу присутствовать">
+      <span>К сожалению, не смогу присутствовать</span>
+    </label>
+  </div>
+
+  <div class="block6-group">
+  <p class="block6-group-title">Будете одни или с парой?</p>
+
+  <label class="block6-option">
+    <input type="radio" name="Гость" value="Буду один/одна" required>
+    <span>Буду один/одна</span>
+  </label>
+
+  <label class="block6-option">
+    <input type="radio" name="Гость" value="Буду с парой" id="withPartner">
+    <span>Буду с парой</span>
+  </label>
+</div>
+
+<div class="block6-extra-field" id="partnerField">
+  <input
+    class="block6-input"
+    type="text"
+    name="ФИО второго человека"
+    placeholder="Введите ФИО второго человека"
+  >
+</div>
+
+  <div class="block6-group">
+    <p class="block6-group-title">Предпочтения в алкоголе</p>
+
+    <label class="block6-option">
+      <input type="checkbox" name="Алкоголь" value="Вино">
+      <span>Вино</span>
+    </label>
+
+    <label class="block6-option">
+      <input type="checkbox" name="Алкоголь" value="Шампанское">
+      <span>Шампанское</span>
+    </label>
+
+    <label class="block6-option">
+      <input type="checkbox" name="Алкоголь" value="Водка">
+      <span>Водка</span>
+    </label>
+
+    <label class="block6-option">
+      <input type="checkbox" name="Алкоголь" value="Авторский дистиллят">
+      <span>Авторский дистиллят</span>
+    </label>
+  </div>
+
+  <div class="block6-group">
+  <p class="block6-group-title">Есть ли аллергические реакции?</p>
+
+  <label class="block6-option">
+    <input type="radio" name="Аллергия" value="Нет" required>
+    <span>Нет</span>
+  </label>
+
+  <label class="block6-option">
+    <input type="radio" name="Аллергия" value="Да" id="hasAllergy">
+    <span>Да</span>
+  </label>
+</div>
+
+<div class="block6-extra-field" id="allergyField">
+  <input
+    class="block6-input"
+    type="text"
+    name="На что аллергия"
+    placeholder="Если да, укажите на что аллергия"
+  >
+</div>
+
+  <button class="block6-submit-btn" type="submit">
+    <img src="img/18.png" alt="">
+  </button>
+
+</form>
+  </div>
+
+</section>
+
+<!-- БЛОК 7
+
+<section class="block7 reveal">
+
+  <div class="block7-wrap">
+    <img class="block7-img" src="img/10.png" alt="">
+
+    <a class="block7-btn" href="https://t.me/+Y4GZfIlVd1gxOTFi" target="_blank">
+      <img src="img/20.png" alt="">
+    </a>
+
+     <a class="block7-btn2" href="https://max.ru/join/VDp3vpeRTkWeg2avpQpmWysB6sa11K9cqDKJSrbEKn8" target="_blank">
+      <img src="img/21.png" alt="">
+    </a>
+  </div>
+
+</section> -->
+
+<!-- БЛОК 8 -->
+
+<section class="block8 reveal">
+
+  <div class="block8-wrap">
+    <img class="block8-img" src="img/14.png" alt="">
+
+    <div class="block8-timer">
+      <div class="time-item">
+        <span id="days">00</span>
+        <p>Дней</p>
+      </div>
+
+      <div class="time-item">
+        <span id="hours">00</span>
+        <p>Часов</p>
+      </div>
+
+      <div class="time-item">
+        <span id="minutes">00</span>
+        <p>Минут</p>
+      </div>
+
+      <div class="time-item">
+        <span id="seconds">00</span>
+        <p>Секунд</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- БЛОК 9 -->
+
+<section class="block9 reveal">
+  <img class="block9-img" src="img/15.png" alt="">
+</section>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
